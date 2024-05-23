@@ -1,7 +1,7 @@
 import unittest
 import requests
 
-BASE_URL = "https://api.github.com/repos/madebyhidden/QMoSSS"
+BASE_URL = "https://api.github.com/repos/madebyhidden/DPV_FA"
 
 
 class TestGitHubMyRepo(unittest.TestCase):
@@ -14,7 +14,7 @@ class TestGitHubMyRepo(unittest.TestCase):
         response = requests.get(BASE_URL)
         repo_data = response.json()
         self.assertIn("language", repo_data)
-        self.assertEqual(repo_data["language"], "TypeScript")
+        self.assertEqual(repo_data["language"], "Java")
 
     def test_repo_has_issues(self):
         response = requests.get(BASE_URL)
